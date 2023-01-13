@@ -1,26 +1,14 @@
-import React from 'react'
-import logo from '../logo.svg';
+
+import { Outlet } from 'react-router-dom';
+import { Header } from '../components/Header';
 
 export const Layout = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <div className='bg-white w-2 h-2'>
-
-        </div>
-      </header>
+    <div id="app-content">
+      <Header/>
+      <div id='body-container' className='p-6'>
+        <Outlet/>
+      </div>
     </div>
   )
 }
