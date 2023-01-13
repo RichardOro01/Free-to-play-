@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react'
+import React, {RefObject, memo, useEffect, useRef} from 'react'
 import {Img} from '../Types'
 import loading from '../icons/movie_loading.png'
 
@@ -6,24 +6,29 @@ type Props = {
     info: Img;
     handleSubmit: (info: Img) => void;
   };
-export const Film:React.FC<Props> = (props) => {
-    const showInfo = () => props.handleSubmit(props.info);
-    const image = useRef<HTMLImageElement>(null);
-    const url = "https://www.themoviedb.org/t/p/w220_and_h330_face/"+props.info.url;
+const Film:React.FC<Props> = ({info, handleSubmit}:Props) => {
+    const showInfo:()=>void = () => handleSubmit(info);
+    const image:RefObject<HTMLImageElement> = useRef<HTMLImageElement>(null);
+    const url:string = "https://www.themoviedb.org/t/p/w220_and_h330_face/"+info.url;
     useEffect(() => {
-        console.log("render "+ props.info.title)
-        const temp: any=new Image();
+        const temp: HTMLImageElement=new Image();
         temp.src=url;
         temp.onload=(()=>{
-            (image.current as any).src=url;
+            if (image.current){//investigar abreviacion
+              image.current.src=url;
+            }
+            
         })
-    }, [])
+    }, [url])
+    
     
   return (
     <div className='flex flex-col w-56 text-center cursor-pointer' onClick={showInfo}>
-        <img src={loading} ref={image} alt={props.info.title} />
-        <div className='text-xl'>{props.info.title}</div>
+        <img src={loading} ref={image} alt={info.title} />
+        <div className='text-xl'>{info.title}</div>
     </div>
     
   )
 }
+
+export default memo(Film)
