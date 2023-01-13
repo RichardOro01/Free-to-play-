@@ -11,6 +11,7 @@ export const Film:React.FC<Props> = (props) => {
     const image = useRef<HTMLImageElement>(null);
     const url = "https://www.themoviedb.org/t/p/w220_and_h330_face/"+props.info.url;
     useEffect(() => {
+        console.log("render "+ props.info.title)
         const temp: any=new Image();
         temp.src=url;
         temp.onload=(()=>{
