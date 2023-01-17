@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 body{
-  background-color: rgb(20, 31, 49);
+  background-image: linear-gradient(rgb(20, 31, 49),rgb(0, 11, 29));
   color: #EEEEEE;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
