@@ -1,5 +1,8 @@
-import {css} from "@emotion/react"
+import styled from "@emotion/styled"
 
-export const fadeIn=css`
-    color: green;
+export const FadeIn=styled("div")`
+   animation: fadeIn 0.5s ;
+   animation-timing-function: ease;
 `
+
+
