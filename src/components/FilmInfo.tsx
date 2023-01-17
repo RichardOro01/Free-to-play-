@@ -1,5 +1,10 @@
+
+
 import React from 'react'
 import {Img} from '../Types'
+import { fadeIn } from '../emotion/fade'
+import { jsx } from "@emotion/react"
+
 
 type Props = {
     hideInfo: () => void,
@@ -11,7 +16,7 @@ export const FilmInfo:React.FC<Props> = ({info, hideInfo}: Props) => {
     }
   return (
     <div className='flex justify-center items-center fixed w-full top-0 bg-slate-900 bg-opacity-75 h-full font-serif' onClick={handleClick}>
-        <div className='w-1/2 overflow-y-auto max-h-[90vh] bg-slate-700 top-24  p-7 flex flex-row gap-3 rounded-lg'>
+        <div css={fadeIn} className='w-1/2 overflow-y-auto max-h-[90vh] bg-slate-700 top-24  p-7 flex flex-row gap-3 rounded-lg'>
             <div className='flex flex-col gap-3 items-center text-2xl w-full'>
                 <img alt={info.title} src={"https://www.themoviedb.org/t/p/w220_and_h330_face/"+info.url} className='w-80'/>
                 <div>{info.title}</div>

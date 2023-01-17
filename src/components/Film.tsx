@@ -7,6 +7,7 @@ type Props = {
     handleSubmit: (info: Img) => void;
   };
 const Film:React.FC<Props> = ({info, handleSubmit}:Props) => {
+
     const showInfo:()=>void = () => handleSubmit(info);
     const image:RefObject<HTMLImageElement> = useRef<HTMLImageElement>(null);
     const url:string = "https://www.themoviedb.org/t/p/w220_and_h330_face/"+info.url;
