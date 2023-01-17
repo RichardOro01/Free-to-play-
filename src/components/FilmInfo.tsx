@@ -1,4 +1,4 @@
-
+/** @jsx jsx */
 
 import React from 'react'
 import {Img} from '../Types'
