@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Free-to-play-/static/css/main.0e364ae2.css",
+    "main.js": "/Free-to-play-/static/js/main.afd9f859.js",
+    "static/js/787.bc7d429a.chunk.js": "/Free-to-play-/static/js/787.bc7d429a.chunk.js",
+    "index.html": "/Free-to-play-/index.html",
+    "static/media/bx-user-circle.svg": "/Free-to-play-/static/media/bx-user-circle.26e8bd94d5c2f54e0fd83b97e4a9a294.svg",
+    "static/media/bx-camera-movie.svg": "/Free-to-play-/static/media/bx-camera-movie.bc49a2de001c3a1a33ff29c3356b3a8f.svg",
+    "main.0e364ae2.css.map": "/Free-to-play-/static/css/main.0e364ae2.css.map",
+    "main.afd9f859.js.map": "/Free-to-play-/static/js/main.afd9f859.js.map",
+    "787.bc7d429a.chunk.js.map": "/Free-to-play-/static/js/787.bc7d429a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e364ae2.css",
+    "static/js/main.afd9f859.js"
+  ]
+}
